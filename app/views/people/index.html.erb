@@ -1,0 +1,10 @@
+<%= link_to 'Add person', new_person_path %>
+
+<% @people.each do |person| %>
+	<p>
+		<%= link_to person.name, person_path(person) %> <br />
+		<%= person.age %> | <%= link_to 'Edit', 
+			edit_person_path(person) %> | <%= link_to 'Delete',
+			person, method: :delete %>
+	</p>
+<% end %>

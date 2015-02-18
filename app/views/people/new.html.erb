@@ -1,0 +1,15 @@
+<% if @person.errors.present? %>
+	<div class='error'>
+		<%= @person.errors.full_messages %>
+	</div>	
+<% end %>
+<%= form_for @person do |f| %>
+
+	<%= f.label :name %> <br />
+	<%= f.text_field :name %> <br />
+	<%= f.label :age %> <br />
+	<%= f.text_field :age %> <br />
+
+	<%= f.submit %>
+
+<% end %>
